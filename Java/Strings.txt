@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class String2 {
+
+    public static void main(String[] args) {
+        System.out.println("Hello world");
+     String animal2 = new String("Dog");
+    //agar new string krke banaynge toh "String pool area " m v banega aur " Heap area " m v banega "Dog"
+      //agar sirf string krke banaoge toh string pool area m banega
+       //strings are imutable - means it does not change
+        String name2= "Dog";
+        name2="Cat";
+        String name3="Dog cat rat";
+       String animal3=new String("Dog");
+        System.out.println(name2.charAt(2));//cat ka character  at any index
+        System.out.println(name3.length());//total length including spaces
+        System.out.println(name3.substring(4));//index se sara character ko print kr dega
+        System.out.println(name3.substring(4, 7));//n-1 tk print kr dega
+        System.out.println("");
+        String name4="anurag";//string pool area
+        String name5=new String("Anurag");//heap area
+        System.out.println(name4==name5);
+        System.out.println(name4.equals(name5));
+        System.out.println(name5.substring(1,5));
+        name4=name4+" Srivastava";//concatination ho raha h (concat)
+        System.out.println(name4);
+        System.out.println(name4.replace('a','g'));
+        String names="Anurag,sumit,vivek";
+        String names2[]=names.split(",");//regular expression
+        for(String name:names2){
+            System.out.println(name);
+        }
+        System.out.println(names.indexOf('s'));
+        System.out.println(names.toLowerCase());
+        System.out.println(names.toUpperCase());
+        String vechicals="cars";
+        String vechicals2=" bike";
+        System.out.println(vechicals.concat(vechicals2));
+
+    }
+}

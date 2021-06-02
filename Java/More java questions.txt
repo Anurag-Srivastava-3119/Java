@@ -1,0 +1,451 @@
+import java.io.OutputStream;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.lang.Math;
+
+public class SumOfArray {
+    public static void main(String[] args) {
+
+        //1.sum of array
+//        int sum=0;
+//        int arr[]={3,4,3,40};
+//        for(int i=0;i<arr.length;i++){
+//            sum+=arr[i];
+//        }
+//        System.out.println("sum of given array is "+  sum);
+//    String name="ELEPHANT";
+//    String name1=name.toLowerCase();
+//        System.out.println(name1);
+//
+//
+//     //2.reverse the string character by character and palindrone string
+//        String s = "mom abba mom";
+//        int leng = s.length();
+//        String rev = "";
+//        for (int i = leng - 1; i >= 0; i--) {
+//            rev += s.charAt(i);
+//        }
+//        System.out.println("The reverse of " + s + " is " + rev);
+//
+//        if (s.equals(rev))
+//            System.out.println("Palindrome");
+//        else {
+//            System.out.println("not palindrome");
+//        }
+//
+//
+//
+//        15.Reverse the string word by word (it has one problem)
+//           input="the sky is blue"
+//           output="blue is sky the"
+
+//           String str="   The sky is blue  ";
+//           String str1="";
+//           String a[]  = str.split(" ");
+//
+//
+//           for(int i=a.length-1;i>=0;i--){
+//               str1=str1 + a[i] +  " " ;
+//
+//           }
+//        System.out.println(str  );  System.out.println( str1);
+
+//
+//
+//
+//
+//
+// 3.count the camel case character
+//    String so= "akdjfKKKJF";
+//     int count=0;
+//     for(int i=0;i<so.length();i++){
+//          char ch=so.charAt(i);
+//          if(ch>=65&&ch<=90){
+//              count++;
+//          }
+//
+//     }
+//        System.out.println("The camel case character in " + so + " is "+ count);
+//
+//
+//
+//
+//    //4.split your string into char alpha and symbols
+//     String an="antf99#$jla9ajfA";
+//   String s1="";
+//   String s2="";
+//   String s3="";
+//   for(int i=0;i<an.length();i++) {
+//       char ch = an.charAt(i);
+//       if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
+//           s1 += an.charAt(i);
+//       } else if (ch >= 32 && ch <= 47 || ch >= 58 && ch <= 64) {
+//           s2 += an.charAt(i);
+//       } else if (ch >= 48 && ch <= 57) {
+//           s3 += an.charAt(i);
+//       }
+//   }
+//        System.out.println(s1);System.out.println(s2);System.out.println(s3);
+//
+//
+//
+//    //5.split the string from a regex
+//        String str="hello -world";
+//        String parts[]=str.split("-");
+//        for(int i=0;i< parts.length;i++){
+//            System.out.println("----- "+ parts[i]);
+//        }
+//
+//        //6.combining all charcter into the string
+//        char ar[]={'a','n','u','r','a','g'};
+//        String s4="";
+//        for(int i=0;i<ar.length;i++){
+//            s4+=ar[i];
+//        }
+//        System.out.println(s4);
+//
+//
+//
+//
+//        //7. delete alternate charcters
+//        String alter="Anurag srivastava";
+//        String alt="";
+//        for(int i=0;i<alter.length();i++){
+//            char cha=alter.charAt(i);
+//            if(i%2==0){
+//                alt+=alter.charAt(i);
+//            }
+//
+//        }
+//        System.out.println(alt);
+//
+//
+//
+//
+//      //8.count types of characters
+//        String aa="@#$*(RTRRert12";
+//         int count1=0; int count2=0;int count3=0;int count4=0;
+//        for(int i=0;i<aa.length();i++){
+//            char cha=aa.charAt(i);
+//            if(cha>=65&&cha<=90){
+//                  count1++;
+//            }
+//            else if(cha>=97&&cha<=122){
+//                count2++;
+//            }
+//
+//            else if(cha>=48&&cha<=57){
+//                count4++;
+//            }
+//            else
+//                count3++;
+//
+//        }
+//        System.out.println("The total numbers of capital letters is"+count1);
+//        System.out.println("The total numbers of lowercase letters is"+count2);
+//        System.out.println("The total numbers of  symbol is"+count3);
+//        System.out.println("The total numbers of  numbers is"+count4);
+//
+//
+//
+//
+//        //9.change the string according to the first letter
+//        String sr="sisHES";
+//        char st=sr.charAt(0);
+//        String sp;
+//        if(st>=65&&st<=90)
+//        sp=sr.toUpperCase();
+//        else
+//            sp=sr.toLowerCase();
+//        System.out.println(sp);
+//
+//
+//
+//
+//      //10.eliminate the characters from the string square brakets lage gaa
+//        String a = "Geek222s for geeks 234 556";
+//        System.out.println(a.replaceAll("[^0-9]", ""));
+//        System.out.println(a.replaceAll(" ", ""));
+//
+//
+//
+//
+//       //11.eliminate the spaces from the string
+//        String ab="Geek222s for geeks 234 556";
+//        System.out.println(ab.replaceAll(" ",""));
+//
+//
+//      //12.removing vowels
+//        String abc="Geek222s for geeks 234 556";
+//        char []aee=abc.toCharArray();
+//        char output;
+//        char result;
+//        for(int i=0;i<aee.length;i++){
+//            if(aee[i]=='a'||aee[i]=='e'||aee[i]=='i'||aee[i]=='o'||aee[i]=='u'||aee[i]=='A'||aee[i]=='E'||aee[i]=='I'||aee[i]=='O'||aee[i]=='U')
+//                 result=aee[i];
+//            else {
+//                output = aee[i];
+//                System.out.print(output);
+//            }
+//        }
+//
+
+
+//        //13.concate the string and reverse it
+//        String con1 = "anurag";
+//        String con2 = "srivastava";
+//        String cond = con1 + con2;
+//        int le = cond.length();
+//        String so = "";
+//        for (int i = cond.length() - 1; i >= 0; i--) {
+//            so += cond.charAt(i);
+//
+//        }
+//        System.out.print(so);
+
+//       //14.detect the binary number as true and others as false (not done)
+//        String str ="010";
+//        System.out.println(str);
+//       char kk = 0;
+//        char sr;
+//        for(int i=0;i<str.length()-1;i++){
+//            sr=str.charAt(i);
+//            if(sr==0||sr==1) {
+//                 kk=str.charAt(i);
+//            }
+//            else{
+//              char kd=str.charAt(i);
+//            }
+//         }
+//        System.out.println(kk);
+
+
+//
+//
+////     16.find number of occurrence of character in string
+//     Scanner sc= new Scanner(System.in);
+//        System.out.println("Enter the string");
+//        String s1=sc.nextLine();
+//        int initiallength =s1.length();
+//        Scanner sc1= new Scanner(System.in);
+//        System.out.println("Enter the character ");
+//        String s2=sc1.next();
+//        s1=s1.replace(s2,"");
+//       int finallength =s1.length();
+//        System.out.println(initiallength-finallength);
+
+//            String str="aajsd";
+//            String str1=str.replaceAll("a","");
+//            System.out.println(str1);
+//            System.out.println(str.length()-str1.length());
+
+
+//        17.java program to find first longest substring without repetation
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the string");
+//        String str = sc.nextLine();
+//
+//
+//        HashSet<Character> anu = new HashSet<>();
+//        String longestoverall = "";
+//        String longesttillnow = "";
+//        for (int i = 0; i < str.length(); i++) {
+//            char c = str.charAt(i);
+//            if (anu.contains(c)) {
+//                longesttillnow = "";
+//                anu.clear();
+//            } else {
+//                longesttillnow += c;
+//                anu.add(c);
+//            }
+//            if (longesttillnow.length() > longestoverall.length()) {
+//                longestoverall=longesttillnow;
+//
+//            }
+//        }
+//        System.out.println("the longest substring is =  "+longestoverall);
+
+
+//       18.java programm to print the element at the even position
+
+//       int arr[]=new int[]{1,2,3,4,5,6,7,8,77};
+//        for(int i=0;i<arr.length;i=i+2){
+//            System.out.print("Index "+i);
+//            System.out.println(" "+"value "+ arr[i]);
+//        }
+
+
+//        19.java programm to find largest of three numbers;
+//        Scanner sc =new Scanner(System.in);
+//        System.out.println("Enter three numbers");
+//        int num1=sc.nextInt();
+//        int num2=sc.nextInt();
+//        int num3=sc.nextInt();
+//
+//        if(num1>num2&&num1>num3){
+//            System.out.println("largest number is "+ num1);
+//
+//        }
+//        else if (num2>num1&&num2>num3){
+//            System.out.println("largest number is "+num2);
+//        }
+//        else{
+//            System.out.println("largest number is "+num3);
+//        }
+
+
+////        20.java programm to find sum of digits
+//        Scanner sc =new Scanner(System.in);
+//        System.out.println("enter the number");
+//        int num1=sc.nextInt();
+//        int sum=0;
+//        int digits;
+//        while (num1>0){
+//            digits=num1%10;
+//            sum+=digits;
+//            num1=num1/10;
+//        }
+//        System.out.println("sum of the number is "+ sum);
+
+
+//        21.java programm to find first number,last number and their sum
+//            Scanner sc =new Scanner(System.in);
+//        System.out.println("enter the number");
+//        int num=sc.nextInt();
+//        int lastdigit;
+//        int firstdigit ;
+//        lastdigit=num%10;
+//        int sum;
+//        firstdigit=num;
+//        while (firstdigit>=10){
+//
+//            firstdigit=firstdigit/10;
+//        }
+//        sum=firstdigit+lastdigit;
+//        System.out.println(firstdigit+" "+lastdigit+" "+ sum);
+
+
+//   22.java programm to check weather the given numnber is perfect square or not
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the number");
+//        int num = sc.nextInt();
+//        for (int i = 1; i < num/2; i++) {
+//            if (i * i == num) {
+//                System.out.println("it is a square of " + i);
+////                return;
+//            }
+//        } problem : agar koi number perfect square ni hai toh print kaise kare ki wo perfect square ni h
+
+
+
+//        23.java program to print the numbers from 1 to n
+
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("enter the number upto where you want to print ");
+//        int num=sc.nextInt();
+//        for(int i=0;i<=num;i+=2){
+//            System.out.print(i+" ");
+//        }
+
+
+//     24.java programm to find the first duplicate occurence in an array
+
+//       int arr[]={1,2,3,4,5,6,7,7};
+//        for(int i=0;i<arr.length;i++){
+//            for(int j=i+1;j<arr.length;j++){
+//                if(arr[i]==arr[j]){
+//                    System.out.println("the first duplicate occurence is "+ arr[i]);
+//                    return;
+//                }
+//
+//            }
+//        }
+
+
+
+//        25.java program to count number of digits in a number
+//         Scanner sc =new Scanner(System.in);
+//        System.out.println("enter the number ");
+//        int n=sc.nextInt();
+//        int count=0;
+//       while(n!=0){
+//           n/=10;
+//           count++;
+//       }
+//        System.out.println(count);
+
+
+
+//   26.java program to count number of odd and even digits;
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Enter a number");
+//        int ss1=sc.nextInt();
+//        int count=0;
+//        int count1=0;
+//       while(ss1>0){
+//           int rem=ss1%10;
+//           if(rem%2==0)
+//               count++;
+//           else
+//               count1++;
+//           ss1=ss1/10;
+//
+//       }
+//        System.out.println("even "+count+"odd "+count1);
+
+
+
+//      27.java program for calculator
+//         Scanner sc=new Scanner(System.in);
+//        System.out.println("enter two numbers");
+//        int num1=sc.nextInt();
+//        int num2=sc.nextInt();
+//        System.out.println("Enter your choice: ");
+//        System.out.println("1.Addition  2.Substraction  3.Multiplication   4.Division");
+//        int choice=sc.nextInt();
+//        switch (choice){
+//            case 1:
+//               int a=num1+num2;
+//                System.out.println("the addition of the number is "+ a);
+//                break;
+//                case 2:
+//                 int b=num1-num2;
+//                System.out.println("the subtraction of the number is "+ b);
+//                    break;
+//                case 3:
+//                    int c=num1*num2;
+//                System.out.println("the Multiplicatoion of the number is "+c);
+//                    break;
+//     case 4:
+//         int d=num1/num2;
+//                System.out.println("the division of the number is "+d);
+//         break;
+//            default:
+//                System.out.println("invalid input ");
+//
+//        }
+//
+         28.java program to find square root of given numbers
+//        double d1=5;
+//        double d2;
+//        d2=Math.sqrt(d1); (math clss k andar aata hai)
+//        System.out.println("square root of d1 is " + d2);
+
+
+
+
+//**  will update more questions soon
+
+
+
+
+
+    }
+
+}
+
+
+
+
+
+

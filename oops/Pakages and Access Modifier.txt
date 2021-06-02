@@ -1,0 +1,29 @@
+public class PakagesAndAccessModifier {
+    public static void main(String[] args) {
+
+
+        //        a java pakage is a group of similar types of classes,interfaces and sub () -> pakages
+//                There are many built in pakages such as java,lang,util,etc
+
+//    advantages of java package :
+//        1.java packages is used to categorize the classess and interface so that they can be easily maintained.
+//        2.java packages provides access protection
+//          3.java packages removes naming collision.
+
+
+//        Access Modifier in java specifies the accessibility or scope of a field,method,constructors or class .we can change the access level
+//         of fields,constructors,methods and class by applying the access modifier on it.
+//
+//        There are four types of java access modifiers:
+//        1.PRIVATE=the access level of a private modifiers is only within the class .it cannot be accessed from outside the class;
+//
+//        2.DEFAULT=the access level of a default modifiers is only within the pacakage .it cannot be accessed from outside the package .
+//                   if you do not specifiy any access level it will be the default.
+//
+//        3.PROTECTED= The access level of a protected modifiers is within the pacakage and outside the package through child class .
+//                     if you do not make the child class it cannot be accessed from outside the package.
+//
+//        4.PUBLIC= the access level of a public modifiers is everywhere . it cann be accessed from within the class, outside the class ,
+//                  within the package and outside the package
+   }
+}

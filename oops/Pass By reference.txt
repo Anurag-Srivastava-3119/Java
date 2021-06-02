@@ -1,0 +1,18 @@
+public class PassByReference {
+    public static void main(String[] args) {
+        dog bhoot=new dog();
+        bhoot.legs=4;
+        changingname(bhoot);
+        System.out.println(bhoot.legs);
+
+    }
+     static class dog{
+        int legs;
+
+     }
+      static void changingname(dog bhoot2){
+        bhoot2.legs=9;
+      }
+
+}
+

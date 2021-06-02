@@ -1,0 +1,44 @@
+public class Constructors {
+    public static void main(String[] args) {
+        vip single=new vip(6);
+        System.out.println(single.bodyguard);
+        vichels car=new vichels(7);
+        System.out.println(car.wheels);
+        vichels auto=new vichels(5,"red");
+        System.out.println(auto.wheels+" "+ auto.colour);
+//        livingbody human=new livingbody(2);
+//
+//        System.out.println(human.legs);
+//        livingbody animal=new livingbody(4);
+//        System.out.println(animal.legs);
+    }
+   static class vip{
+        int bodyguard;
+        vip(int guard){
+             bodyguard=guard;
+             System.out.println("jg");
+         }
+    }
+            static class vichels{
+            int wheels;
+            String colour;
+             vichels(int wheels){
+                 this.wheels=wheels;//this keyword current object ko indicate krta h
+             }
+             vichels(int wheels,String colour){
+                this.wheels=wheels;
+                this.colour=colour;
+             }
+            }
+
+       //constructors overloading=similar to method overloading you can overload constructors if two or more
+         // constructors are different in parameters
+            static class livingbody{
+                 int legs;
+
+                 livingbody(int legs){
+                     this.legs=legs;
+                 }
+       }
+
+}

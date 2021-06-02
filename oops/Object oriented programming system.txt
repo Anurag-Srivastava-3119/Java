@@ -1,0 +1,91 @@
+public class ObjectOrientedProgrammingSystem {
+    public static void main(String[] args) {
+        Human Raju = new Human();// Human class ki raju aur saha naam se ek object bna lia
+        Human Saha = new Human();
+        Raju.name = "Raju"; //ab states ko define kr diye Raju naam k object ka....according to his datatypes(int,string,boolean)
+        Raju.bhakti = true;
+        Raju.senses = 5;
+        Raju.sex = "male";
+        Raju.skinTone = "brownish in colour";
+        Raju.Description();//ab uus object ki properties ko define kr diyee...
+        Raju.japa();
+        Raju.eat();
+        Raju.serve();
+        Saha.name = "Saha";//this is another object
+        Saha.bhakti = false;
+        Saha.senses = 0;
+        Saha.sex = "male";
+        Saha.skinTone = "brownish in colour";
+        Saha.Description();
+
+        Saha.eat();
+        int firstnumber = 90;
+        int secondnumber = 98;
+        int result = minof(firstnumber, secondnumber);
+        System.out.println(result);
+        print();
+        swap(firstnumber,secondnumber);
+        System.out.println(firstnumber+" " +secondnumber);
+        dog slkie=new dog();
+        dog fudge=new dog();
+        slkie.legs=4;
+        fudge.legs=5;
+        swap(slkie.legs, fudge.legs);
+        System.out.println(slkie.legs+" "+ fudge.legs);
+
+        System.out.println(slkie);
+//       changedog dd=new changedog();
+    }
+   static class Human{        //this is the way to define class with curley
+    //defining states
+    boolean bhakti;
+    String skinTone,sex,name;
+    int senses;
+
+    //defining properties ..every properties has its own curlie braces
+    public void Description(){
+        System.out.println("his name is "+name+ " he will do "+ bhakti +" bhakti his skintone will be "+skinTone
+                +" he is  a "+sex+" and he has "+senses + " senses in control");
+
+    }
+
+       public void japa(){
+           System.out.println("he will chant  16 rounds");
+       }
+       public void eat(){
+           System.out.println("he eats prasadam");
+       }
+       public void serve(){
+           System.out.println("he will serve to his lord");
+       }
+
+
+   }
+
+
+
+        
+
+   //Methods:
+   static int minof(int a,int b){   //here "int" is "RETURN TYPE" if you do not want to return anything write "VOID" as return type
+       if(a<b){                     //in brakets it will take the arguments
+           return a;
+       }
+       else
+           return b;
+   }
+   static void print(){
+       System.out.println("hajf");
+   }
+   static void swap(int a ,int b){
+        int temp=a;
+        a=b;
+        b=temp;
+
+   }
+
+static class dog{
+        int legs;
+}
+
+}

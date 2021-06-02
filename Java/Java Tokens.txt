@@ -1,0 +1,33 @@
+public class JavaTokens {
+    public static void main(String[] args) {
+      /*java program includes 5 types of tokens they are::
+
+      1. Reversed Keywords -there are all total of 50 reserved keywords
+      2.Identifiers-these are the programmer designed tokens . they are used for naming .
+      3. Literals -literals in java are a sequence of characters or digits . there are 5 types of literals
+                   1.Integer literals
+                   2.Floating point literals
+                   3.Characters literals
+                   4. String literals
+                   5. Boolean literals
+      4.Operators - an operator is a symbol that takes one or more arguments and operates on them to produce  a result
+      5.Seperators - these are the symbols used to indicate where groups of code are divided and arranged . exs
+                     1.paranthesis ();
+                     2.braces {};
+                     3.brackets or square brakets [];
+                     4.semicolon ;
+                     5.comma ,
+                     6.period .(dot)
+       */
+
+    int count ,i=0;
+    String string;
+    count= args.length;
+        System.out.println("no of arguments = "+ count);
+    while (i<count){
+        string=args[i];
+        i=i+1;
+        System.out.println(i + ": "+ "java is "+ string+ " !");
+    }
+    }
+}

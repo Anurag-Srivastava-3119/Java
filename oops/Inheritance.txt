@@ -1,0 +1,62 @@
+public class Inheritance {
+    public static void main(String[] args) {
+        //Inheritance is an "is a relationship".we use inheritance only if an is a relationship is present between the two classes
+//        ex;
+//        A car is a vehicle.
+//        orange is a fruit.
+
+        //you can also assign methods and fields protected .protected members are accessible
+        //1. from within the class.
+        //2.within its subclasses.
+        //3. within the same package.
+
+       teacher t1 =new teacher();
+//        t1.name="Anurag";
+//       t1.eat();
+//       t1.walk();
+//       t1.teach();
+//       singer s1 = new singer();
+//       s1.name="dhakan";
+//       s1.walk();
+//       t1.walk();
+       overriding o1= new overriding();
+       o1.name="over";
+       o1.eat();
+
+    }
+}
+
+//ek object ka ek hi parent hota hai
+//herarichal parenting ho skta hai mtlb ek object ka ek parent phir uska ek parent phir uska ek parent ....and so on....
+
+class person{
+   protected String name;
+   public void walk(){
+       System.out.println(name+" is walking");
+
+   }
+   public void eat(){
+       System.out.println(name+"he is eating");
+   }
+}
+class teacher extends person{                  //extend lagte hi teacher ek object  bnn gaya hai person class ka......
+    public void teach(){
+        System.out.println("he is teaching");
+    }
+
+}
+class singer extends person{                   //extend lagte hi singer ek object  bnn gaya hai person class ka......
+    public void sing(){
+        System.out.println("he is singing");
+    }
+}
+
+//Method Overriding:
+//if the same method is defined in both the superclass(parent class) and subclass(child class) then in that
+// case the method in the subclass overrides the method in the superclass ......
+
+class overriding extends person{
+    public void eat(){
+        System.out.println(name + " overriding is eating");
+    }
+}

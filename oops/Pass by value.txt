@@ -1,0 +1,32 @@
+public class PassByValue {
+    public static void main(String[] args) {
+      //primitive datatype
+        int a=90;
+        value(a);
+        System.out.println("a"+a);
+
+
+        dog d1=new dog();
+        d1.legs=4;
+        dog d2=new dog();
+        d2.legs=5;
+        value(d1,d2);
+        System.out.println(d1.legs+" "+d2.legs);
+
+    }
+    static void value(int acopy){
+        acopy=88;
+        System.out.println("acopy"+acopy);
+    }
+    //non primitive datatype
+    static void value(dog a,dog b){
+        dog temp=a;
+        b=a;
+        a=temp;
+
+
+    }
+    static class dog{
+        int legs;
+    }
+}

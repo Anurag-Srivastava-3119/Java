@@ -1,0 +1,466 @@
+package com.company;
+
+
+
+import java.sql.Array;
+import java.util.Scanner;
+
+public class Main {
+    // creating a method sum static indicating that it is the part of clss main
+    static int sum(int a, int b) {
+        return (a + b);
+    }
+
+    public static void main(String[] args) {
+//         write your code here
+//         sout nd press TAB button ...to get println
+        System.out.println("Hello world");
+        String name = "Anurag";
+        System.out.println(name);
+        int a = 45, x = 45;
+
+        float b = 45.22f;
+        boolean Adultsonly = false;
+        System.out.println(b);
+        System.out.println(a);
+        System.out.println(Adultsonly);
+
+        /*
+          RULES--- for constructing name of variables in java
+          1.can contain--- Digits ,underscores ,dollar signs, letters
+           2.Should begins LETTERS....we use this
+           3.JAVA is a CASE SENSITIVE Language which means that
+              anurag and Anurag are two different variable altogether.
+           4.should not use    whitespaces
+           5.You cannot use reserved KEYWORDS from java (should Unique)
+           */
+        /*
+           Two Types of JAVA DATA TYPES:
+           1. Primitive
+           byte (1 byte) Range -128 to +127, short (2 bytes), int (4 bytes), float (4 bytes), long (8 bytes), char (2 byte),
+           double (8 byte), boolean(1 bit)
+           2. NON Primitive or Reference Data Type--
+
+         */
+        // PRIMITIVE DATA TYPES:
+        byte u = 55;
+        double d = 37.84877883;
+        char sim = 'R';
+        System.out.println(u);
+        System.out.println(d);
+        System.out.println(sim);
+      /*
+        Operators in JAVA:
+
+        operand, operator, operand = Result
+          4        +          7    =   11
+
+          Types of operators in JAVA:
+          1. Arithmetic operators
+          2. Assignment operators (equals to)
+          3. Logical operators
+          4. Comparison operators
+       */
+        // 1. Arithmetic operators
+        int num1 = 64;
+        int num2 = 48;
+
+        System.out.println("The value of num1 + num2 is ");
+        System.out.println(num1 + num2);
+        // To copy and paste any line use --  select the lines and press.. Ctrl+D
+        // or to copy at anywhere use {Ctrl+C} nd  {Ctrl+V}
+
+        System.out.println("The value of num1 - num2 is ");
+        System.out.println(num1 - num2);
+        System.out.println("The value of num1 * num2 is ");
+        System.out.println(num1 * num2);
+        System.out.println("The value of num1 / num2 is ");
+        System.out.println(num1 / num2);
+        System.out.println("The value of num1 % num2 is ");
+        System.out.println(num1 % num2);
+        System.out.println(num1++);
+        System.out.println(num1--);
+        System.out.println(++num1);
+        System.out.println(--num1);
+
+        double num3 = 122.765;
+        int num4 = 48;
+        System.out.println("The value of num3 + num4 is ");
+        System.out.println(num3 + num4);
+
+
+        System.out.println("The value of num3/ num4 is ");
+        System.out.println(num3 / num4);
+        System.out.println("The value of num3 % num4 is ");
+        System.out.println(num3 % num4);
+        System.out.println(num3++);
+        System.out.println(num3--);
+        System.out.println(++num3);
+        System.out.println(--num3);
+        num1 += 3; // (num1 = num1 + 3)......num1 = 64 + 3 = 67
+        num3 -= 100;
+        num2 *= 200;
+        num4 /= 2;
+
+        System.out.println(num1);
+        System.out.println(num3);
+        System.out.println(num2);
+        System.out.println(num4);
+       /*
+          4. Comparision operator:
+          1. == (Checks for equality of two values)
+          2. != (Checks if two values are not Equal)
+          3. <
+          4. >
+          5. <=
+          6. >=
+          */
+       /*
+          1. && - Logical and operator (Returns true only if both the conditions are true)
+          2. || - Logical or operator(Returns true only if any one condition is true)
+          3. ! - Logical not
+        */
+
+
+        // IMPORTANTS PROGRAMMING:
+
+
+        // Taking user input in Java
+        String Anything;
+
+        Scanner scan = new Scanner(System.in);
+        /*
+          1. scanner clss ka ek object bnaya
+          2. system.in means ..Mujhe keyboard se input lena hai
+         */
+
+        System.out.println("Enter any input");
+        // ab screen pe ENTER INPUT ka option aayega
+        Anything = scan.nextLine();
+        // int Anything = scan.nextLine();[Ye integer input leta h sirf]
+        // jo bhi input aayega usko next line se READ karo (abhi memory m hai aur isko print v krwana h)
+        // agr sirf NEXT likhoge NEXTLINE k gazah pr then Blank Space (in your input) will be a DELIMETER for it
+        System.out.println(Anything);
+
+        // Concatenation OR Combining of statements:
+        String input1 = "Anurag";
+        String input2 = "Srivastavaa";
+        System.out.println(input1 + input2);
+        // '+' acts as Concatenate on strings  AND    '+' acts as Addition on integer
+
+        System.out.println(input1.length());
+        // input1 ka length bta dega
+        System.out.println(input2.toUpperCase());
+        System.out.println(input2.toLowerCase());
+        // input2 ko uppercase nd lowercase m convert kr dega
+
+        // if we want to add Double comas in the string then use {\"}
+        // These Are called Escape Sequence Characters :
+        System.out.println(input1 + "\t " + "raj\" " + input2);
+        System.out.println(input1 + "raj\\ " + input2);
+        System.out.println(input1 + "\t" + "raj\t " + input2);
+        System.out.println(input1 + "\n" + "raj\n " + input2);
+
+        System.out.println(input1.contains("r"));
+        System.out.println(name.contains("anuh"));
+        // ye syntax bta raha h ki mere STRING m (input1 and name) mein ye sb h ki ni jo main input daalu
+        System.out.println(input2.charAt(10));
+        // ye btata h kisi v index pe char value of ur string
+
+        // MATHS STATEMENTS
+        int numb1 = 33, numb2 = 45;
+        System.out.println(Math.max(numb1, numb2));
+        System.out.println(Math.min(numb1, numb2));
+
+        System.out.println(Math.sqrt(54954));
+        System.out.println(Math.abs(65));
+        System.out.println(Math.random());
+//      To comment a Line we use (Ctrl + /(Forword slash))
+//        to comment a whole big paragraph ...first select it and press (Ctrl + /)
+
+        // If Else statement:
+//        Scanner kid = new Scanner(System.in);
+//        System.out.println("enter your age");
+//        int age = scan.nextInt();
+//        if (age<5)
+//            System.out.println("you are a kid");
+//        else
+//            System.out.println("you are not a kid");
+        // If Else ladder:
+        Scanner adult = new Scanner(System.in);
+        System.out.println("enter your age");
+        int umar = scan.nextInt();
+        if (umar > 20) {
+            System.out.println("you are an Adult");
+        } else if (umar > 5) {
+            System.out.println("you are not a kid");
+        } else {
+            System.out.println("you are a kid");
+        }
+//
+        // SWITCH STATEMENT:
+        Scanner object = new Scanner(System.in);
+        System.out.println("enter your age again");
+        int age = scan.nextInt();
+        switch (age) {
+            case 1:
+                System.out.println("you are 23 year old");
+                break;
+            case 2:
+                System.out.println("you are 33 year old");
+                break;
+            default:
+                System.out.println("you are pressed invalid");
+
+        }
+
+        // quick quiz: print sunday to saturday based on numbers 1 to 7 typed by the user
+        System.out.println("Enter a number between 1 to 7");
+        Scanner days = new Scanner(System.in);
+
+        int num = scan.nextInt();
+        switch (num) {
+            case 1:
+                System.out.println("today is Sunday");
+                break;
+            case 2:
+                System.out.println("today is Monday");
+                break;
+            case 3:
+                System.out.println("today is tuesday");
+                break;
+            case 4:
+                System.out.println("today is Wednesday");
+                break;
+            case 5:
+                System.out.println("today is Thrusday");
+                break;
+            case 6:
+                System.out.println("today is friday");
+                break;
+            case 7:
+                System.out.println("today is Saturday");
+                break;
+            default:
+                System.out.println("you pressed invalid");
+        }
+
+
+                /*
+                  WHILE LOOP:
+
+                  1.declaration   (optional)
+                 2. while(condition)
+                  {
+                  CODE: this code will keep executing until the condition is true
+                  }
+                  3.increment nd decrement
+                 */
+
+        int i = 0;
+        while (i < 25) {
+            System.out.println(i);
+            i++; //i += 1; bhi kr skte the
+        }
+
+          /*
+              Martin Faller - Any Fool can write a code that a computer can understand
+                              And a Good programmer can write a code that a Human can understand
+           */
+
+        /*
+           Do while Loop:
+
+           1.Declaration
+            2.do
+            {
+              CODE: this code will keep executing until the condition is true
+              3.increment and decrement
+            }
+           4.while (Condition)
+
+             AGR CONDITION FALSE V HO TABHI EK BAAR RUN KAREGA PROGRAM ..SEE EX:
+         */
+
+        int j = 0;
+        do {
+
+            System.out.println(j);
+            j++;
+        }
+        while (j > 25);
+
+        // FOR LOOPS:
+        for (int k = 0; k <= 5; k++) {
+
+            if (k == 3)
+                break; // CONTINUE
+            else
+                System.out.println(k);
+        }
+        // JAVA ARRAYS: 1D array
+        int[] marks = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+        System.out.println(marks[9]);
+        System.out.println(marks[0]);
+        // value updation in array
+        marks[9] = 80;
+        System.out.println(marks[9]);
+        System.out.println("Enter the number of yours students");
+
+
+//
+//
+//
+//
+//
+//
+//
+// LOOPS IN ARRAY:
+//        // Classical way to iterate an array
+//        System.out.println("this is normal For loop");
+//        for (i = 0; i <= marks.length; i++) // for(i=0;i<marks.length;i++)
+//        {
+//            if (i >= 10)
+//                break;
+//            else
+//                System.out.println(marks[i]);
+//        }
+        System.out.println("This is For Each loop");
+        for (int value : marks)
+            System.out.println(value);
+//        System.out.println("This is the value for 2D array");
+//          // 2D array         o 1 2
+//           int [][] matrix = {{6,7,8},  // oth row
+//                              {1,2,3}};  // 1st row
+//        System.out.println(matrix[0][1]);
+//       // String Arr
+//        System.out.println("This is the Value For String Array Using FOR EACH LOOP");
+//        String [] cars = {"cars","maruti","innova","swift"};
+//        for (String value: cars){
+//            System.out.println(value);
+//        }
+//      // Try catch: ERROR throw ni krta h ...aur aage badh jaata h program m
+//        try{
+//            System.out.println(cars[2]);
+//        }
+//        catch(Exception e){
+//            System.out.println(e);
+//        }
+//        System.out.println("This is the answer for the method Sum");
+//        System.out.println(sum(45,76));
+//
+//      Take 2 numbers from the user and add them
+        float number1, number2, Addition;
+        int input;
+
+        System.out.println("Enter first  number");
+        Scanner user = new Scanner(System.in);
+        number1 = scan.nextFloat();
+
+        System.out.println("Enter your 2nd number");
+        Scanner scan2 = new Scanner(System.in);
+        number2 = scan2.nextFloat();
+//        String prompt = "Enter 0 for Addition, 1 for Subtraction, " +
+//                        "3 for Multiplication, 4 for Division ";
+//        System.out.println(prompt);
+        System.out.println("Enter 0 for Addition, 1 for Subtraction," +
+                " 2 for Multiplication, 3 for Division ");
+        Scanner scan3 = new Scanner(System.in);
+        input = scan.nextInt();
+        switch (input) {
+            case 0:
+                System.out.println("Adding these numbers");
+                System.out.print("the result is: ");
+                System.out.print(number1 + number2);
+                break;
+            case 1:
+                System.out.println("Subtracting these numbers");
+                System.out.print("the result is: ");
+                System.out.print(number1 - number2);
+                break;
+            case 2:
+                System.out.println("multiplying these numbers");
+                System.out.print("the result is: ");
+                System.out.print(number1 * number2);
+                break;
+            case 3:
+                System.out.println("Dividing these numbers");
+                System.out.print("the result is: ");
+                System.out.print(number1 / number2);
+                break;
+
+            default:
+                System.out.println("invalid");
+        }
+    }
+}
+          // TAB press krne se bada space aata h
+//        System.out.println();
+////
+////
+////
+////    }
+////    }
+
+
+
+
+* Reverse the duplicates: using Hash map (hash map and hash set do concept hai)
+import java.util.HashSet;
+import java.util.Set;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        String str = "my name is anurag";  //string taken
+
+        System.out.println(removeduplicates(str));
+
+    }
+
+    public static String removeduplicates(String str) {  //created a method
+        Set<Character> set = new HashSet<>();    //created a hashset
+        StringBuffer sb = new StringBuffer();  //a string buffer object
+        for (int i = 0; i < str.length(); i++) {  //loop through the string
+            Character c = str.charAt(i);   //it will extract each character from the string and add to c
+            if (!set.contains(c)) {  //if A is not present
+                set.add(c);         // add A to set
+                sb.append(c);    // append string buffer with A
+
+            }
+        }
+        return sb.toString();
+    }
+}
+
+
+* Reverse the given word: (little tricky hai)
+import java.util.Scanner;
+
+public class ReverseWord {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any string");
+        String s=sc.nextLine();
+        System.out.println(reverseword(s));
+    }
+    public static String reverseword(String s){
+       String ans="";
+        int i=s.length()-1;
+       while(i>=0){
+           while(i>=0&&s.charAt(i)==' ')i--;
+           int j=i;
+         if(i<0)break;
+           while(i>=0&&s.charAt(i)!=' ')i--;
+             if(ans.isEmpty()) {
+                 ans = ans.concat(s.substring(i+1, j+1));
+             }else{
+                 ans = "  "+ans.concat(s.substring(i+1, j+1));
+             }
+       }
+
+    return ans;
+
+    }
+}
+
+

@@ -1,0 +1,73 @@
+package Encapsulation;
+
+public class EncapsulationIntroduction {
+//    encapsulation in java is a process of wrapping code and data together into a single unit .
+//        The data in a class is hidden from other classes so it is also known as DATA HIDING.
+
+    public static void main(String[] args) {
+        Student s1=new Student();
+        Student s2=new Student();
+        s1.setAge(3);
+        System.out.println("age is "+s1.getAge());
+        s1.setName("RAJ");
+        System.out.println("name is "+s1.getName());
+
+    }
+}
+
+
+
+
+package Encapsulation;
+
+public class Student {
+   private int age;
+   private String name;
+
+   public int getAge(){    //getter and setter methods
+       return age;          //camel case formate
+   }
+   public void setAge(int age){
+       if(age>20) {
+           System.out.println("age should not more than 20");
+       }else{
+             this.age=age;
+           }
+       }
+
+      public String getName(){
+       return name;
+      }
+      public void setName(String name){
+       this.name=name;
+      }
+
+}
+
+
+package Encapsulation;
+
+import java.util.Scanner;
+
+public class ReverseStringUsingRecursion {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter any string");
+
+        String s = sc.nextLine();
+
+        System.out.println(reverse(s));
+
+    }
+
+    public static String reverse(String s) {
+        if (s == null || s.length() <= 1) {
+            return s;
+        } else {
+            return reverse(s.substring(1)) + s.charAt(0);
+        }
+    }
+}
+
+
